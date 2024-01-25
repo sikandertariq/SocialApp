@@ -1,0 +1,35 @@
+/* FILEPATH: /c:/Users/siki/Desktop/react-typescript-project/yellow/src/css/navbar.css */
+
+.navbar {
+    background-color: #6a559c; /* Tailwind: bg-gray-200 */
+    padding: 1rem; /* Tailwind: py-4 */
+    display: flex; /* Tailwind: flex */
+    justify-content: space-between; /* Tailwind: justify-between */
+    align-items: center; /* Tailwind: items-center */
+    font-family: Arial, Helvetica, sans-serif;
+     /* Tailwind: text-yellow-500 */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Tailwind: text-2xl */
+    font-weight: bold; /* Tailwind: font-bold */
+    color: #2d3748; /* Tailwind: text-gray-800 */
+}
+
+.navbar-nav {
+    display: flex; /* Tailwind: flex */
+}
+
+.navbar-nav li {
+    margin-right: 1rem; /* Tailwind: mr-4 */
+}
+
+.navbar-nav li a {
+    text-decoration: none; /* Tailwind: no-underline */
+    color: #2d3748; /* Tailwind: text-gray-800 */
+    padding: 0.5rem 1rem; /* Tailwind: py-2 px-4 */
+}
+
+.navbar-nav li a:hover {
+    color: #e7d809; /* Tailwind: text-yellow-500 */
+}
