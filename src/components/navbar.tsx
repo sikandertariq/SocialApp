@@ -24,24 +24,29 @@ const Navbar: React.FC = () => {
               Home
             </Link>
           </li>
-          <li>
-            <Link to="/login" className="navbar-link">
-              Login
-            </Link>
-          </li>
+          {/* Conditionally render the Create Post link based on user authentication */}
+          {user ? (
+            <li>
+              <Link to="/create-post" className="navbar-link">
+                Create Post
+              </Link>
+            </li>
+          ) : (
+            <li>
+              <Link to="/login" className="navbar-link">
+                Login
+              </Link>
+            </li>
+          )}
         </ul>
-        <div className="  navbar-link">
+        {/* Display user information if logged in */}
         {user && (
-        <>
-          {user?.displayName}
-
-          
-          <img src={user?.photoURL || ""} alt="" className="ml-6 max-h-10" />
-        </>
+          <div className="navbar-user">
+            {user.displayName}
+            <img src={user.photoURL || ""} alt="" className="ml-6 max-h-10" />
+          </div>
         )}
       </div>
-      </div>
-      
     </>
   );
 };
